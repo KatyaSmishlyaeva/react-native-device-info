@@ -159,7 +159,6 @@ The example app in this repository shows an example usage of every single API, c
 | [getManufacturer()](#getmanufacturer)                             | `Promise<string>`   |  ✅  |   ✅    |   ✅     | ❌   |   ✅     |
 | [getMaxMemory()](#getmaxmemory)                                   | `Promise<number>`   |  ❌  |   ✅    |   ✅     | ✅   |   ❌     |
 | [getModel()](#getmodel)                                           | `string`            |  ✅  |   ✅    |   ✅     | ❌   |   ✅     |
-| [getPhoneNumber()](#getphonenumber)                               | `Promise<string>`   |  ❌  |   ✅    |   ❌     | ❌   |   ❌     |
 | [getPowerState()](#getpowerstate)                                 | `Promise<object>`   |  ✅  |   ✅    |   ✅     | ✅   |   ✅     |
 | [getProduct()](#getproduct)                                       | `Promise<string>`   |  ❌  |   ✅    |   ❌     | ❌   |   ❌     |
 | [getPreviewSdkInt()](#getPreviewSdkInt)                           | `Promise<number>`   |  ❌  |   ✅    |   ❌     | ❌   |   ❌     |
@@ -781,15 +780,7 @@ let model = DeviceInfo.getModel();
 
 ### getPhoneNumber()
 
-Gets the device phone number.
-
-#### Examples
-
-```js
-DeviceInfo.getPhoneNumber().then((phoneNumber) => {
-  // Android: null return: no permission, empty string: unprogrammed or empty SIM1, e.g. "+15555215558": normal return value
-});
-```
+The getPhoneNumber() has been removed. This method uses deprecated Android APIs. You can use react-native-sim-cards-manager to get the phone number.
 
 #### Android Permissions
 
